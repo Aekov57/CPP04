@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/09 13:53:44 by misimon           #+#    #+#             */
-/*   Updated: 2023/05/10 17:21:19 by misimon          ###   ########.fr       */
+/*   Created: 2023/05/09 13:44:36 by misimon           #+#    #+#             */
+/*   Updated: 2023/05/10 16:54:44 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define	CAT_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
-#include "Dog.hpp"
+# include "Animal.hpp"
 
-class Cat : public Animal
+class Dog : public Animal
 {
+	private:
+		Brain* brain;
 	public:
-		Cat();
-		Cat(const Cat& copy);
-		virtual ~Cat();
+		Dog();
+		Dog(const Dog& copy);
+		virtual ~Dog();
 
-		Cat& operator=(const Cat& copy);
+		Dog& operator=(const Dog& copy);
+
 		virtual void makeSound() const;
 };
-
 #endif
-

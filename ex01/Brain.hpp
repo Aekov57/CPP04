@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/09 13:53:44 by misimon           #+#    #+#             */
-/*   Updated: 2023/05/10 17:21:19 by misimon          ###   ########.fr       */
+/*   Created: 2023/05/10 15:07:44 by misimon           #+#    #+#             */
+/*   Updated: 2023/05/10 15:44:46 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define	CAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-#include "Dog.hpp"
+# include <iostream>
+# include <string>
 
-class Cat : public Animal
+class Brain
 {
+	private:
+		std::string ideas[100];
 	public:
-		Cat();
-		Cat(const Cat& copy);
-		virtual ~Cat();
-
-		Cat& operator=(const Cat& copy);
-		virtual void makeSound() const;
+		Brain();
+		Brain(const Brain& copy);
+		~Brain();
+		
+		Brain& operator=(const Brain& copy);
 };
 
 #endif
-
